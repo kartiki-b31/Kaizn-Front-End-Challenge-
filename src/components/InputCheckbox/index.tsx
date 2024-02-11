@@ -10,7 +10,7 @@ export const InputCheckbox: InputCheckboxComponent = ({ id, checked = false, dis
       <label
         className={classNames("KaizntreeInputCheckbox--label", {
           "KaizntreeInputCheckbox--label-checked": checked,
-          "KaizntreeInputCheckbox--label-disabled": disabled,
+          
         })}
       />
       <input

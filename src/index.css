@@ -150,7 +150,8 @@ hr.KaizntreeBreak--l {
 }
 
 .KaizntreeInputCheckbox--input {
-  display: none;
+  opacity: 0;
+  transform: translate(-16px);
 }
 
 .KaizntreeButton {
