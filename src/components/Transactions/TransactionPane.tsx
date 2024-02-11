@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { InputCheckbox } from "../InputCheckbox"
 import { TransactionPaneComponent } from "./types"
 
@@ -8,7 +8,9 @@ export const TransactionPane: TransactionPaneComponent = ({
   setTransactionApproval: consumerSetTransactionApproval,
 }) => {
   const [approved, setApproved] = useState(transaction.approved)
-
+  useEffect(() => {
+    setApproved(transaction.approved);
+  }, [transaction.approved]);
   return (
     <div className="KaizntreePane">
       <div className="KaizntreePane--content">
@@ -27,7 +29,7 @@ export const TransactionPane: TransactionPaneComponent = ({
             transactionId: transaction.id,
             newValue,
           })
-
+          transaction.approved = newValue;
           setApproved(newValue)
         }}
       />
